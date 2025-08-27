@@ -12,7 +12,7 @@ Link to method documentation: https://codeforces.com/apiHelp/methods#user.info
 
 ### How to run:
 
-Download and open the app using Xcode, at least version XX (which it was made with). The preview should load automatically. Since the URL itself contains the target users, the API call will fetch on running.
+Download and open the app using Xcode, at least version 16.4 (which it was made with). The preview should load automatically. Since the URL itself contains the target users, the API call will fetch on running.
 To change the users that are shown for customization, change the list separated with semicolons after the "handles=" part of the URL.
 
 ### Enjoy! :)
