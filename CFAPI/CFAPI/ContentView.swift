@@ -13,7 +13,15 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Codeforces User Dashboard")
+                // check loading or error state
+                if userVM.isLoading {
+                    ProgressView("Loading...")
+                    .padding()
+                } else if userVM.hasError {
+                    Text("There's been an error, please try again later! :)")
+                    .padding()
+                } else {
+                    Text("Codeforces User Dashboard")
                         .multilineTextAlignment(.center)
                         .font(.title)
                         .fontWeight(.bold)
@@ -28,7 +36,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                
+                }
             }
             .padding()
             .task {
@@ -45,3 +53,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
